@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    color: #fff;
     background-color: #000;
 }
 
@@ -17,7 +18,7 @@ div.clock {
 }
 
 div.clock2 {
-    color: fff;
+    color: #fff;
 }
 
 div.clock a {

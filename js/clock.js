@@ -1,6 +1,8 @@
 var myVar = setInterval(function() {
     startTime();
 }, 1000);
+const heute = new Date();
+console.log(heute)
 
 function startTime() {
     var today = new Date();
@@ -15,61 +17,82 @@ function startTime() {
     s = checkTime(s);
     TAG = getDay(DoW);
     MONAT = getMonat(M)
-        // document.getElementById('clock2').innerHTML =
-        //     Y + "." + M + "." + D + ",  " + h + ":" + m + ":" + s;
+    document.getElementById('clock2').innerHTML =
+        Y + "." + M + "." + D + ",  " + h + ":" + m + ":" + s;
     document.getElementById('date').innerHTML = TAG + "., " + D + ". " + MONAT + ". " + Y;
     document.getElementById('hour').innerHTML = h;
     document.getElementById('minute').innerHTML = m;
     document.getElementById('second').innerHTML = s;
     var t = setTimeout(startTime, 500);
-    // console.log("tick")
+    // console.log(Y + "." + M + "." + D + ",  " + h + ":" + m + ":" + s);
+    // console.log("Day of week: " + " " + DoW + "Monat: " + M)
+
 }
 
 function getDay(dow) {
     switch (dow) {
         case 0:
             TAG = "Son";
+            break;
         case 1:
             TAG = "Mon";
+            break;
         case 2:
             TAG = "Die";
+            break;
         case 3:
             TAG = "Mit";
+            break;
         case 4:
             TAG = "Don";
+            break;
         case 5:
             TAG = "Fre";
+            break;
         case 6:
             TAG = "Sam";
+
     }
+    console.log(dow + TAG)
     return TAG;
 }
 
 function getMonat(month) {
     switch (month) {
-        case 1:
+        case 0:
             MONAT = "Jan";
-        case 2:
+            break;
+        case 1:
             MONAT = "Feb";
-        case 3:
+            break;
+        case 2:
             MONAT = "Mar";
-        case 4:
+            break;
+        case 3:
             MONAT = "Apr";
-        case 5:
+            break;
+        case 4:
             MONAT = "Mai";
-        case 6:
+            break;
+        case 5:
             MONAT = "Jun";
-        case 7:
+            break;
+        case 6:
             MONAT = "Jul";
-        case 8:
+            break;
+        case 7:
             MONAT = "Aug";
-        case 9:
+            break;
+        case 8:
             MONAT = "Sep";
-        case 10:
+            break;
+        case 9:
             MONAT = "Okt";
-        case 11:
+            break;
+        case 10:
             MONAT = "Nov";
-        case 12:
+            break;
+        case 11:
             MONAT = "Dez";
 
     }
